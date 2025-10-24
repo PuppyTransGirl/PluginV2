@@ -2,6 +2,7 @@ package fr.openmc.core;
 
 import fr.openmc.api.input.ChatInput;
 import fr.openmc.api.input.location.ItemInteraction;
+import fr.openmc.core.features.city.listeners.CityAutoClaimListener;
 import fr.openmc.core.features.cube.listeners.CubeListener;
 import fr.openmc.core.features.cube.listeners.RepulseEffectListener;
 import fr.openmc.core.features.cube.multiblocks.MultiBlocksListeners;
@@ -38,7 +39,8 @@ public class ListenersManager {
                 new InteractListener(),
                 new AywenCapListener(),
                 new NoMoreRabbit(),
-                new ArmorListener()
+                new ArmorListener(),
+                new CityAutoClaimListener()
         );
         if (!OMCPlugin.isUnitTestVersion()) {
             registerEvents(
